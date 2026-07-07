@@ -1,0 +1,116 @@
+/* memento.sky — legal pages · Deep Plate */
+/* Funnel Display is OFL-licensed (Google Fonts). Momo Signature is
+   intentionally not served on the web pending license documentation. */
+
+:root {
+  --screen-bg: #070a18;
+  --plate-a: #070a18;
+  --plate-b: #0f1428;
+  --ink: #e8d9b4;
+  --ink-soft: rgba(232, 217, 180, 0.55);
+  --ink-faint: rgba(232, 217, 180, 0.18);
+  --ink-grain: rgba(220, 200, 160, 0.03);
+  --body-font: "Funnel Display", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --mono-font: ui-monospace, "SF Mono", monospace;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { color-scheme: dark; }
+
+body {
+  background: var(--screen-bg);
+  background-image:
+    radial-gradient(ellipse at 50% 0%, var(--plate-b) 0%, var(--plate-a) 60%),
+    radial-gradient(var(--ink-grain) 1px, transparent 1px);
+  background-size: 100% 480px, 3px 3px;
+  background-repeat: no-repeat, repeat;
+  color: var(--ink);
+  font-family: var(--body-font);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+main {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 64px 24px 96px;
+}
+
+.wordmark {
+  font-size: 15px;
+  letter-spacing: 0.16em;
+  color: var(--ink-soft);
+  text-transform: lowercase;
+  text-decoration: none;
+  font-family: var(--mono-font);
+}
+
+h1 {
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  margin: 40px 0 8px;
+  text-transform: lowercase;
+}
+
+h2 {
+  font-weight: 600;
+  font-size: 19px;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  margin: 36px 0 10px;
+  text-transform: lowercase;
+}
+
+p, li { color: var(--ink); margin-bottom: 12px; }
+li { margin-left: 20px; margin-bottom: 8px; }
+ul { margin-bottom: 12px; }
+
+.updated {
+  font-family: var(--mono-font);
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  color: var(--ink-soft);
+  text-transform: lowercase;
+  margin-bottom: 28px;
+}
+
+a { color: var(--ink); text-underline-offset: 3px; }
+a:hover { color: #fff6e0; }
+
+.soft { color: var(--ink-soft); }
+
+strong { font-weight: 600; }
+
+hr {
+  border: none;
+  border-top: 0.6px solid var(--ink-faint);
+  margin: 32px 0;
+}
+
+nav.footer-nav {
+  margin-top: 56px;
+  padding-top: 20px;
+  border-top: 0.6px solid var(--ink-faint);
+  display: flex;
+  gap: 24px;
+}
+nav.footer-nav a {
+  font-family: var(--mono-font);
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  color: var(--ink-soft);
+  text-decoration: none;
+  text-transform: lowercase;
+}
+nav.footer-nav a:hover { color: var(--ink); }
+
+code {
+  font-family: var(--mono-font);
+  font-size: 0.85em;
+  color: var(--ink-soft);
+}

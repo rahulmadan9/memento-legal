@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>memento.sky — privacy policy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+<main>
+  <a class="wordmark" href="../">memento.sky</a>
+
+  <h1>privacy policy</h1>
+  <p class="updated">last updated · 7 july 2026</p>
+
+  <p>Memento.sky ("Memento") is a private journal of the people you've met. This policy explains what data the app touches, where it lives, and what we can and cannot see.</p>
+
+  <h2>who we are</h2>
+  <p>Memento is built by an indie developer. Contact: <a href="mailto:team.slowpress+memento@gmail.com">team.slowpress+memento@gmail.com</a>.</p>
+
+  <h2>what's stored on your device and in your icloud</h2>
+  <p>The diary itself never leaves your devices and your private iCloud account. Specifically:</p>
+  <ul>
+    <li><strong>People</strong> you log — names, the moment-of-meeting timestamp, the mascot pick, optional photos, optional sketches.</li>
+    <li><strong>Moments</strong> you attach to those people — text and timestamps.</li>
+    <li><strong>Linked contacts</strong> — if you choose to link one of your address-book contacts to a person, the details you pick (such as a name or phone number) are copied into your diary. Contact linking uses Apple's out-of-process contact picker; the app never reads your address book in the background.</li>
+  </ul>
+  <p>This data syncs <strong>only</strong> through Apple's CloudKit private database tied to your Apple&nbsp;ID. We have no servers and no access to it. If you enable Apple's Advanced Data Protection in iCloud settings, your data is end-to-end encrypted such that not even Apple can read it.</p>
+
+  <h2>what we collect off your device</h2>
+  <p>Three small streams, each described and reversible:</p>
+  <ul>
+    <li><strong>Anonymous usage analytics (PostHog) — off unless you turn it on.</strong> Screen views and a small set of key actions (for example <code>first_spot_saved</code>, <code>paywall_shown</code>). No names, no diary content, no photos. No autocapture. Analytics is opt-in everywhere: nothing is sent unless you enable "share anonymous usage" in settings → about → privacy.</li>
+    <li><strong>Subscription state (Apple StoreKit + RevenueCat).</strong> When you subscribe or restore, Apple processes the payment; RevenueCat, our subscription infrastructure, records the subscription state and outcome under an anonymous identifier. No card data — Apple never shares it with us.</li>
+    <li><strong>Diagnostics (Apple MetricKit).</strong> Crash and performance reports, aggregated by Apple and delivered to the app's local cache only. Never uploaded by us.</li>
+  </ul>
+
+  <h2>why</h2>
+  <ul>
+    <li>The diary stays on your device because it's yours.</li>
+    <li>Analytics — only if you opt in — tells us what to improve.</li>
+    <li>Subscription processing keeps the lights on.</li>
+    <li>Diagnostics keeps the app from crashing in your hand.</li>
+  </ul>
+
+  <h2>legal basis (gdpr)</h2>
+  <ul>
+    <li>Consent — analytics.</li>
+    <li>Contract performance — subscription.</li>
+    <li>Legitimate interest — fraud and crash detection.</li>
+  </ul>
+
+  <h2>sharing</h2>
+  <ul>
+    <li><strong>Apple</strong> — controller for the App Store, iCloud, and StoreKit. Apple's privacy policy applies to those.</li>
+    <li><strong>PostHog</strong> — processor, EU region — only if you opt in to analytics.</li>
+    <li><strong>RevenueCat</strong> — processor, US region.</li>
+  </ul>
+  <p>We never sell data, and there is no advertising or cross-app tracking of any kind.</p>
+
+  <h2>retention</h2>
+  <ul>
+    <li>On-device + iCloud — until you delete (settings → about → delete everything).</li>
+    <li>PostHog — 12 months rolling, if you opted in.</li>
+    <li>RevenueCat — per their retention policy.</li>
+    <li>Apple receipts — per Apple and tax law.</li>
+  </ul>
+
+  <h2>your rights (gdpr / similar)</h2>
+  <ul>
+    <li><strong>Access & portability</strong> — settings → your sky → export your sky produces a ZIP with everything: JSON, photos, and scribbles, machine-readable.</li>
+    <li><strong>Erase</strong> — settings → about → delete everything wipes local and cloud copies. It is irreversible.</li>
+    <li><strong>Withdraw consent</strong> — turn off "share anonymous usage" in settings → about → privacy.</li>
+    <li><strong>Object / restrict</strong> — write to <a href="mailto:team.slowpress+memento@gmail.com">team.slowpress+memento@gmail.com</a> and we'll honor it.</li>
+  </ul>
+
+  <h2>children</h2>
+  <p>Memento is intended for ages 13 and up. We do not knowingly collect data from anyone under 13.</p>
+
+  <h2>security</h2>
+  <ul>
+    <li>iCloud at-rest encryption (Apple-held keys) by default.</li>
+    <li>End-to-end encryption when you enable iCloud's Advanced Data Protection.</li>
+    <li>TLS in transit for analytics and subscription telemetry.</li>
+    <li>No Memento-side servers ever handle your diary data.</li>
+  </ul>
+
+  <h2>changes</h2>
+  <p>This policy is versioned in our public repository (<code>memento-legal</code>). Changes ship with a new "last updated" date.</p>
+
+  <h2>complaints</h2>
+  <p>You can complain to us first (<a href="mailto:team.slowpress+memento@gmail.com">team.slowpress+memento@gmail.com</a>), or directly to your local data-protection authority — for EEA / UK users, your national regulator (such as the ICO) is the typical authority.</p>
+
+  <nav class="footer-nav">
+    <a href="../">home</a>
+    <a href="../support/">support</a>
+  </nav>
+</main>
+</body>
+</html>
