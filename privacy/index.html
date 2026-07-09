@@ -14,7 +14,7 @@
   <a class="wordmark" href="../">memento.sky</a>
 
   <h1>privacy policy</h1>
-  <p class="updated">last updated · 7 july 2026</p>
+  <p class="updated">last updated · 8 july 2026</p>
 
   <p>Memento.sky ("Memento") is a private journal of the people you've met. This policy explains what data the app touches, where it lives, and what we can and cannot see.</p>
 
@@ -22,58 +22,58 @@
   <p>Memento is built by an indie developer. Contact: <a href="mailto:team.slowpress+memento@gmail.com">team.slowpress+memento@gmail.com</a>.</p>
 
   <h2>what's stored on your device and in your icloud</h2>
-  <p>The diary itself never leaves your devices and your private iCloud account. Specifically:</p>
+  <p>The diary itself — names, moments, photos, scribbles — never leaves your devices and your private iCloud account. Specifically:</p>
   <ul>
-    <li><strong>People</strong> you log — names, the moment-of-meeting timestamp, the mascot pick, optional photos, optional sketches.</li>
+    <li><strong>People</strong> you log — names, the moment-of-meeting timestamp, the mascot pick, an optional photo, an optional sketch.</li>
     <li><strong>Moments</strong> you attach to those people — text and timestamps.</li>
-    <li><strong>Linked contacts</strong> — if you choose to link one of your address-book contacts to a person, the details you pick (such as a name or phone number) are copied into your diary. Contact linking uses Apple's out-of-process contact picker; the app never reads your address book in the background.</li>
+    <li><strong>Linked contacts.</strong> If you link a person in your sky to someone in your phone's contacts, the details you pick (name, phone number) are copied into that person's entry. The picker is Apple's own contact-picker screen — out-of-process — so Memento only ever sees the one contact you select, never your whole address book, and it never reads your contacts in the background. You can also type a phone number or add social-media handles (Instagram, Facebook, Snapchat) by hand; those live in the same private diary entry.</li>
   </ul>
   <p>This data syncs <strong>only</strong> through Apple's CloudKit private database tied to your Apple&nbsp;ID. We have no servers and no access to it. If you enable Apple's Advanced Data Protection in iCloud settings, your data is end-to-end encrypted such that not even Apple can read it.</p>
 
   <h2>what we collect off your device</h2>
-  <p>Three small streams, each described and reversible:</p>
+  <p>Three small streams, each described below:</p>
   <ul>
-    <li><strong>Anonymous usage analytics (PostHog) — off unless you turn it on.</strong> Screen views and a small set of key actions (for example <code>first_spot_saved</code>, <code>paywall_shown</code>). No names, no diary content, no photos. No autocapture. Analytics is opt-in everywhere: nothing is sent unless you enable "share anonymous usage" in settings → about → privacy.</li>
-    <li><strong>Subscription state (Apple StoreKit + RevenueCat).</strong> When you subscribe or restore, Apple processes the payment; RevenueCat, our subscription infrastructure, records the subscription state and outcome under an anonymous identifier. No card data — Apple never shares it with us.</li>
-    <li><strong>Diagnostics (Apple MetricKit).</strong> Crash and performance reports, aggregated by Apple and delivered to the app's local cache only. Never uploaded by us.</li>
+    <li><strong>Usage analytics (PostHog).</strong> From first launch, on every install, the app records a small set of key actions (<code>first_spot_saved</code>, <code>paywall_shown</code>, etc.) plus basic app-lifecycle events (launches, foreground/background), so we can see how the app is used and improve it — no screen views, no autocapture, no PII. These events are <strong>not linked to your identity</strong>: they're tied to a random per-install id that is never joined to your name, email, or Apple&nbsp;ID, your IP address is discarded on receipt, and no location or GeoIP lookup is performed. Your diary — people, moments, notes, photos, scribbles — is never collected.</li>
+    <li><strong>Subscription state (RevenueCat + Apple StoreKit).</strong> When you subscribe or restore, Apple processes the payment; RevenueCat records the subscription state and outcome. No card data — Apple never shares it with us.</li>
+    <li><strong>Diagnostics (Apple MetricKit).</strong> Crash reports, scroll performance, and hangs. Aggregated by Apple, delivered to Memento's local cache only. Never uploaded.</li>
   </ul>
 
   <h2>why</h2>
   <ul>
     <li>The diary stays on your device because it's yours.</li>
-    <li>Analytics — only if you opt in — tells us what to improve.</li>
+    <li>Analytics tells us what to improve.</li>
     <li>Subscription processing keeps the lights on.</li>
     <li>Diagnostics keeps the app from crashing in your hand.</li>
   </ul>
 
   <h2>legal basis (gdpr)</h2>
   <ul>
-    <li>Consent — analytics.</li>
+    <li>Legitimate interest — product analytics (pseudonymous; not linked to your identity).</li>
     <li>Contract performance — subscription.</li>
-    <li>Legitimate interest — fraud and crash detection.</li>
   </ul>
 
   <h2>sharing</h2>
   <ul>
     <li><strong>Apple</strong> — controller for the App Store, iCloud, and StoreKit. Apple's privacy policy applies to those.</li>
-    <li><strong>PostHog</strong> — processor, EU region — only if you opt in to analytics.</li>
-    <li><strong>RevenueCat</strong> — processor, US region.</li>
+    <li><strong>PostHog</strong> — processor, US region. PostHog, Inc. processes the usage analytics in the United States. EU/UK/Swiss→US transfers rely on PostHog's participation in the <strong>EU-US Data Privacy Framework</strong> (and its UK and Swiss extensions), with the <strong>Standard Contractual Clauses</strong> in our signed Data Processing Agreement as an additional safeguard.</li>
+    <li><strong>RevenueCat</strong> — processor, US region. Standard contractual clauses on file.</li>
   </ul>
   <p>We never sell data, and there is no advertising or cross-app tracking of any kind.</p>
 
   <h2>retention</h2>
   <ul>
     <li>On-device + iCloud — until you delete (settings → about → delete everything).</li>
-    <li>PostHog — 12 months rolling, if you opted in.</li>
+    <li>PostHog — 12 months rolling.</li>
     <li>RevenueCat — per their retention policy.</li>
-    <li>Apple receipts — per Apple and tax law.</li>
+    <li>Apple receipts — per Apple and tax law (typically 7 years).</li>
   </ul>
 
   <h2>your rights (gdpr / similar)</h2>
   <ul>
-    <li><strong>Access & portability</strong> — settings → your sky → export your sky produces a ZIP with everything: JSON, photos, and scribbles, machine-readable.</li>
+    <li><strong>Access</strong> — settings → your sky → export your sky exports a ZIP with everything.</li>
     <li><strong>Erase</strong> — settings → about → delete everything wipes local and cloud copies. It is irreversible.</li>
-    <li><strong>Withdraw consent</strong> — turn off "share anonymous usage" in settings → about → privacy.</li>
+    <li><strong>Portability</strong> — the ZIP is JSON + raw photos + scribble PNGs, machine-readable.</li>
+    <li><strong>Object to analytics</strong> — usage analytics run under legitimate interest. Because the events aren't linked to your identity, we can't single out and delete one person's data, and there's no per-user switch. To stop future collection entirely, delete the app; you can also write to <a href="mailto:team.slowpress+memento@gmail.com">team.slowpress+memento@gmail.com</a> with any objection.</li>
     <li><strong>Object / restrict</strong> — write to <a href="mailto:team.slowpress+memento@gmail.com">team.slowpress+memento@gmail.com</a> and we'll honor it.</li>
   </ul>
 
