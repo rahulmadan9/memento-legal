@@ -40,7 +40,7 @@
       <ul>
         <li>On a first launch nothing is sent to Meta — Meta's SDK is not even started.</li>
         <li>In the EEA, the UK and Switzerland (decided from your App Store country; if it can't be read, we treat you as being in one of these regions) it stays <strong>off</strong> until you turn the switch on, or tap Allow on the tracking prompt, which we show once, after you save your first star.</li>
-        <li>Everywhere else it is <strong>on</strong> from your next launch, and the switch turns it off.</li>
+        <li>Everywhere else it turns <strong>on</strong> by itself once two separate launches have read an App Store country that doesn't require consent — normally from your second launch, or one launch later if you have just moved from one of the regions above — and the switch turns it off.</li>
         <li>Turning it <strong>off</strong> stops our events at once and holds back what Meta's SDK has queued; Meta's SDK stops entirely the next time you open Memento, and that launch deletes the queue. Meta's SDK cannot be switched off inside a session that already started it, so until you next open the app it may still record an app-open or a purchase (held back, then deleted unsent), make its own configuration requests to Meta, and — only if this installation's one-time install notice to Meta has never gone through — send that notice, without the advertising identifier. Turning it <strong>on</strong> takes effect the next time you open Memento.</li>
       </ul>
     </li>
