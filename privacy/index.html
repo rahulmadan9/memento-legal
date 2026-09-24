@@ -31,7 +31,7 @@
   <p>This data syncs <strong>only</strong> through Apple's CloudKit private database tied to your Apple&nbsp;ID. We have no servers and no access to it. If you enable Apple's Advanced Data Protection in iCloud settings, your data is end-to-end encrypted such that not even Apple can read it.</p>
 
   <h2>what we collect off your device</h2>
-  <p>Four small streams, each described below:</p>
+  <p>Three small streams, each described below:</p>
   <ul>
     <li><strong>Usage analytics (PostHog).</strong> From first launch, on every install, the app records a small set of key actions (<code>first_spot_saved</code>, <code>paywall_shown</code>, etc.) plus basic app-lifecycle events (launches, foreground/background), so we can see how the app is used and improve it — no screen views, no autocapture, no PII. These events are <strong>not linked to your identity</strong>: they're tied to a random per-install id that is never joined to your name, email, or Apple&nbsp;ID, your IP address is discarded on receipt, and no location or GeoIP lookup is performed. Your diary — people, moments, notes, photos, scribbles — is never collected.</li>
     <li><strong>Subscription state (RevenueCat + Apple StoreKit).</strong> When you subscribe or restore, Apple processes the payment; RevenueCat records the subscription state and outcome. No card data — Apple never shares it with us.</li>
@@ -44,8 +44,8 @@
         <li>Turning it <strong>off</strong> stops our events at once and holds back what Meta's SDK has queued; Meta's SDK stops entirely the next time you open Memento, and that launch deletes the queue. Meta's SDK cannot be switched off inside a session that already started it, so until you next open the app it may still record an app-open or a purchase (held back, then deleted unsent), make its own configuration requests to Meta, and — only if this installation's one-time install notice to Meta has never gone through — send that notice, without the advertising identifier. Turning it <strong>on</strong> takes effect the next time you open Memento.</li>
       </ul>
     </li>
-    <li><strong>Diagnostics (Apple MetricKit).</strong> Crash reports, scroll performance, and hangs. Aggregated by Apple, delivered to Memento's local cache only. Never uploaded.</li>
   </ul>
+  <p><strong>Diagnostics: none collected by the app.</strong> Memento has no crash reporter or diagnostics collector of its own. (When ad measurement is on, Meta's SDK may report crashes in its own code to Meta, under Meta's terms.) If you opt in to sharing analytics with app developers in iOS Settings (Privacy &amp; Security → Analytics &amp; Improvements), Apple may share aggregated crash and performance data with us; that is Apple's feature, governed by Apple's privacy policy.</p>
 
   <h2>why</h2>
   <ul>
@@ -53,7 +53,6 @@
     <li>Analytics tells us what to improve.</li>
     <li>Subscription processing keeps the lights on.</li>
     <li>Ad measurement tells us which of our ads actually bring people to Memento, so we stop paying for the ones that don't.</li>
-    <li>Diagnostics keeps the app from crashing in your hand.</li>
   </ul>
 
   <h2>legal basis (gdpr)</h2>
@@ -84,7 +83,7 @@
   <h2>your rights (gdpr / similar)</h2>
   <ul>
     <li><strong>Access</strong> — settings → your sky → export your sky exports a ZIP with everything.</li>
-    <li><strong>Erase</strong> — settings → about → delete everything wipes local and cloud copies. It is irreversible.</li>
+    <li><strong>Erase</strong> — Settings → about → delete everything wipes local + cloud copies of your sky, removes any data-export file the app left on your device, cancels any pending reminder notifications, and resets the app's settings on this device — including the ad-measurement (meta) switch, which goes back to its default for where you are — and deletes what Meta's SDK has stored on this device (its install identifier and anything it had queued). Two small non-personal records are kept on purpose: a "finished onboarding" flag (so you are not sent back through setup on your other devices) and your purchase record (so you are never asked to pay again for what you already bought).</li>
     <li><strong>Portability</strong> — the ZIP is JSON + raw photos + scribble PNGs, machine-readable.</li>
     <li><strong>Object to analytics</strong> — usage analytics run under legitimate interest. Because the events aren't linked to your identity, we can't single out and delete one person's data, and there's no per-user switch. To stop future collection entirely, delete the app; you can also write to <a href="mailto:team.slowpress+memento@gmail.com">team.slowpress+memento@gmail.com</a> with any objection.</li>
     <li><strong>Withdraw consent / object to ad measurement</strong> — settings → privacy → ad measurement (meta). You can also change the tracking permission any time in iOS Settings → Privacy &amp; Security → Tracking.</li>
